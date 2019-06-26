@@ -16,8 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var ageVal: UILabel!
     @IBOutlet weak var ageSliderValue: UISlider!
     @IBOutlet weak var switchState: UISwitch!
-    @IBOutlet weak var firstNAme: UITextField!
-    @IBOutlet weak var lastNAme: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var firstName: UITextField!
     
     
     @IBAction func ageSlider(_ sender: Any) {
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func createUser(_ sender: Any) {
-        let currentUser = User(firstName:firstNAme.text!, lastName: lastNAme.text!, age:Int(ageSliderValue.value), isTrainer: switchState.isOn)
+        let currentUser = User(firstName:firstName.text!, lastName: lastName.text!, age:Int(ageSliderValue.value), isTrainer: switchState.isOn)
         currentUser.describe()
         allUsers.append(currentUser)
     }

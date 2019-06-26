@@ -104,8 +104,8 @@
                     <connections>
                         <outlet property="ageSliderValue" destination="MYd-yg-dv0" id="CDr-Cq-nkB"/>
                         <outlet property="ageVal" destination="j7E-kh-tZI" id="fqS-Wb-tnh"/>
-                        <outlet property="firstNAme" destination="uyq-ue-zec" id="19m-0M-obQ"/>
-                        <outlet property="lastNAme" destination="zhw-Ke-2SK" id="DzJ-gk-oeu"/>
+                        <outlet property="firstName" destination="zhw-Ke-2SK" id="rXS-jj-Pa5"/>
+                        <outlet property="lastName" destination="uyq-ue-zec" id="gbO-OV-fPA"/>
                         <outlet property="switchState" destination="q9H-nd-dOs" id="tHx-Rl-93v"/>
                     </connections>
                 </viewController>
