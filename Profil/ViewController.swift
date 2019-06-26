@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
 //    var currentUser: User
-    var allUsers = [User]()
+      var allUsers: [User] = []
     
     @IBOutlet weak var ageVal: UILabel!
     @IBOutlet weak var ageSliderValue: UISlider!
@@ -47,6 +47,16 @@ class ViewController: UIViewController {
         ageVal.text = "36"
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let destinationViewController = segue.destination as?  UsersTableViewController
+//        destinationViewController?.users = allUsers
+//        or
+        if let destinationViewController = segue.destination as? UsersTableViewController {
+            destinationViewController.toto = allUsers
+//            destination = origine
+        }
+    }
+    
     func updateAge() {
         ageVal.text = "\(Int(ageSliderValue.value))"
     }

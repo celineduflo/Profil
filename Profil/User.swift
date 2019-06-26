@@ -25,4 +25,7 @@ struct User {
     func describe() {
         print("Bonjour je m'appelle \(firstName) \(lastName), jai \(age) ans et je suis \(isTrainer ? "formateur" : "apprenant") ")
     }
+    
 }
+
+var allUsers = [User]()
