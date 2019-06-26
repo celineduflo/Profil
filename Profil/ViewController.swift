@@ -9,10 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+
+//    var currentUser: User
+    var allUsers = [User]()
     
     @IBOutlet weak var ageVal: UILabel!
     @IBOutlet weak var ageSliderValue: UISlider!
     @IBOutlet weak var switchState: UISwitch!
+    @IBOutlet weak var firstNAme: UITextField!
+    @IBOutlet weak var lastNAme: UITextField!
     
     
     @IBAction func ageSlider(_ sender: Any) {
@@ -20,9 +25,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func switchAction(_ sender: Any) {
+
     }
     
+    @IBAction func createUser(_ sender: Any) {
+        var currentUser = User(firstName:firstNAme.text!, lastName: lastNAme.text!, age:Int(ageSliderValue.value), isTrainer: switchState.isOn)
+        currentUser.describe()
+        allUsers.append(currentUser)
+    }
+    
+    @IBAction func listUser(_ sender: Any) {
+        for user in allUsers {
+            user.describe()
+        }
+    }
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,6 +50,8 @@ class ViewController: UIViewController {
     func updateAge() {
         ageVal.text = "\(Int(ageSliderValue.value))"
     }
+    
+
 
 }
 

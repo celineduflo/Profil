@@ -50,11 +50,17 @@
                                 <rect key="frame" x="152" y="669" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Créer utilisateur"/>
+                                <connections>
+                                    <action selector="createUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3xp-Xd-94j"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pw-Nu-Nbl">
                                 <rect key="frame" x="137" y="707" width="141" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Lister les utilisateurs"/>
+                                <connections>
+                                    <action selector="listUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQS-Tb-uOl"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyq-ue-zec">
                                 <rect key="frame" x="152" y="97" width="97" height="30"/>
@@ -98,6 +104,8 @@
                     <connections>
                         <outlet property="ageSliderValue" destination="MYd-yg-dv0" id="CDr-Cq-nkB"/>
                         <outlet property="ageVal" destination="j7E-kh-tZI" id="fqS-Wb-tnh"/>
+                        <outlet property="firstNAme" destination="uyq-ue-zec" id="19m-0M-obQ"/>
+                        <outlet property="lastNAme" destination="zhw-Ke-2SK" id="DzJ-gk-oeu"/>
                         <outlet property="switchState" destination="q9H-nd-dOs" id="tHx-Rl-93v"/>
                     </connections>
                 </viewController>
