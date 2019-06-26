@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func createUser(_ sender: Any) {
-        var currentUser = User(firstName:firstNAme.text!, lastName: lastNAme.text!, age:Int(ageSliderValue.value), isTrainer: switchState.isOn)
+        let currentUser = User(firstName:firstNAme.text!, lastName: lastNAme.text!, age:Int(ageSliderValue.value), isTrainer: switchState.isOn)
         currentUser.describe()
         allUsers.append(currentUser)
     }
