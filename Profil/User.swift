@@ -6,6 +6,7 @@
 //  Copyright © 2019 Céline Duflo. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 
@@ -14,6 +15,7 @@ struct User {
     var lastName: String
     var age: Int
     var isTrainer: Bool
+    var avatar: UIImage? = nil
     
     init(firstName: String, lastName: String, age: Int, isTrainer: Bool) {
         self.firstName = firstName

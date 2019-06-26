@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
 //    var currentUser: User
-      var allUsers: [User] = []
+    var allUsers: [User] = []
+    var formateurs: [User] = []
+    var apprenants: [User] = []
     
     @IBOutlet weak var ageVal: UILabel!
     @IBOutlet weak var ageSliderValue: UISlider!
@@ -32,6 +34,11 @@ class ViewController: UIViewController {
         let currentUser = User(firstName:firstName.text!, lastName: lastName.text!, age:Int(ageSliderValue.value), isTrainer: switchState.isOn)
         currentUser.describe()
         allUsers.append(currentUser)
+        if currentUser.isTrainer {
+            formateurs.append(currentUser)
+        } else {
+            apprenants.append(currentUser)
+        }
     }
     
     @IBAction func listUser(_ sender: Any) {
@@ -53,14 +60,19 @@ class ViewController: UIViewController {
 //        or
         if let destinationViewController = segue.destination as? UsersTableViewController {
             destinationViewController.toto = allUsers
-//            destination = origine
+//            destination <-- origine
+            destinationViewController.appr = apprenants
+            destinationViewController.form = formateurs
         }
+        
     }
     
     func updateAge() {
         ageVal.text = "\(Int(ageSliderValue.value))"
     }
     
+    
+//    let image =
 
 
 }

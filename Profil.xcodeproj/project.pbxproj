@@ -16,6 +16,8 @@
 		4EED677222C26EF3009AFAC5 /* ProfilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED677122C26EF3009AFAC5 /* ProfilUITests.swift */; };
 		4EED678222C35AFA009AFAC5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED678122C35AFA009AFAC5 /* User.swift */; };
 		4EED678422C379A4009AFAC5 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED678322C379A4009AFAC5 /* UsersTableViewController.swift */; };
+		4EED678622C3AE50009AFAC5 /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED678522C3AE50009AFAC5 /* ImageController.swift */; };
+		4EED678922C3BE58009AFAC5 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED678822C3BE58009AFAC5 /* AvatarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		4EED677322C26EF3009AFAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EED678122C35AFA009AFAC5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4EED678322C379A4009AFAC5 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		4EED678522C3AE50009AFAC5 /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
+		4EED678822C3BE58009AFAC5 /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				4EED675122C26EF2009AFAC5 /* AppDelegate.swift */,
+				4EED678822C3BE58009AFAC5 /* AvatarViewController.swift */,
 				4EED675322C26EF2009AFAC5 /* ViewController.swift */,
 				4EED675522C26EF2009AFAC5 /* Main.storyboard */,
 				4EED675822C26EF3009AFAC5 /* Assets.xcassets */,
@@ -109,6 +114,7 @@
 				4EED675D22C26EF3009AFAC5 /* Info.plist */,
 				4EED678122C35AFA009AFAC5 /* User.swift */,
 				4EED678322C379A4009AFAC5 /* UsersTableViewController.swift */,
+				4EED678522C3AE50009AFAC5 /* ImageController.swift */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -262,10 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EED678622C3AE50009AFAC5 /* ImageController.swift in Sources */,
 				4EED675422C26EF2009AFAC5 /* ViewController.swift in Sources */,
 				4EED678222C35AFA009AFAC5 /* User.swift in Sources */,
 				4EED678422C379A4009AFAC5 /* UsersTableViewController.swift in Sources */,
 				4EED675222C26EF2009AFAC5 /* AppDelegate.swift in Sources */,
+				4EED678922C3BE58009AFAC5 /* AvatarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

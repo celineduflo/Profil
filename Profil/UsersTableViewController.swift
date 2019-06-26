@@ -11,6 +11,11 @@ import UIKit
 class UsersTableViewController: UITableViewController {
    
     var toto: [User] = []
+    var appr: [User] = []
+    var form: [User] = []
+    
+    var avatar: UIImage?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,33 +31,54 @@ class UsersTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return toto.count
+//        return toto.count
+        //reecrire avec 1 seul tableau en entree où on compte le nombre soit de users soit d'apprenants
+        return (section == 0 ? appr.count : form.count)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
         
-        //         Configure the cell...
-        let user = toto[indexPath.row]
-        cell.textLabel?.text = "\(user.firstName) \(user.lastName)"
-        cell.detailTextLabel?.text = user.isTrainer ? "Formateur" : "Apprenant"
+//        let user = toto[indexPath.row]
+//        cell.textLabel?.text = "\(user.firstName) \(user.lastName)"
+//        cell.detailTextLabel?.text = user.isTrainer ? "Formateur" : "Apprenant"
+//        return cell
+        
+        //réecrit en filtrant le tableau affiché selon le user trainer ou apprenant:
+        switch(indexPath.section){
+            case 0:
+                cell.textLabel?.text = appr[indexPath.row].firstName + " " + appr[indexPath.row].lastName
+                cell.detailTextLabel?.text = "apprenant"
+            default:
+                cell.textLabel?.text = form[indexPath.row].firstName + " " + form[indexPath.row].lastName
+                cell.detailTextLabel?.text = "formateur"
+        }
+        
+        let list = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+        let choice = list.randomElement()!
+        let image = UIImage (named: String(choice))
+        
+        cell.imageView?.image = image
         return cell
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        //         #warning Incomplete implementation, return the number of rows
+        switch section {
+        case 0:
+            return "Apprenants"
+        case 1:
+            return "Formateurs"
+        default:
+            return ""
+        }
+        //POUR METTRE LES NOMS DES CONTINENTS EN TITRE
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
