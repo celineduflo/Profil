@@ -15,7 +15,7 @@ struct User {
     var lastName: String
     var age: Int
     var isTrainer: Bool
-    var avatar: UIImage? = nil
+    var avatar: UIImage?
     
     init(firstName: String, lastName: String, age: Int, isTrainer: Bool) {
         self.firstName = firstName

@@ -7,13 +7,21 @@
 //
 
 import UIKit
+//employe
+class ViewController: UIViewController, TransferAvatar {
+    
 
-class ViewController: UIViewController {
-
-//    var currentUser: User
     var allUsers: [User] = []
     var formateurs: [User] = []
     var apprenants: [User] = []
+    var photo: UIImage?
+    
+    func transfer(avatar: UIImage) {
+        photo = avatar
+    }
+    
+ //    var currentUser: User
+    
     
     @IBOutlet weak var ageVal: UILabel!
     @IBOutlet weak var ageSliderValue: UISlider!
@@ -31,8 +39,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func createUser(_ sender: Any) {
-        let currentUser = User(firstName:firstName.text!, lastName: lastName.text!, age:Int(ageSliderValue.value), isTrainer: switchState.isOn)
+        var currentUser = User(firstName:firstName.text!, lastName: lastName.text!, age:Int(ageSliderValue.value), isTrainer: switchState.isOn)
+
         currentUser.describe()
+        currentUser.avatar = photo
+        
         allUsers.append(currentUser)
         if currentUser.isTrainer {
             formateurs.append(currentUser)
@@ -55,14 +66,18 @@ class ViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destinationViewController = segue.destination as?  UsersTableViewController
-//        destinationViewController?.users = allUsers
-//        or
+
+    
         if let destinationViewController = segue.destination as? UsersTableViewController {
             destinationViewController.toto = allUsers
 //            destination <-- origine
             destinationViewController.appr = apprenants
             destinationViewController.form = formateurs
+        }
+        
+        if let destinationViewController = segue.destination as? AvatarViewController {
+            destinationViewController.delegate = self
+            //            destination <-- origine
         }
         
     }

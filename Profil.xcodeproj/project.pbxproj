@@ -18,6 +18,8 @@
 		4EED678422C379A4009AFAC5 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED678322C379A4009AFAC5 /* UsersTableViewController.swift */; };
 		4EED678622C3AE50009AFAC5 /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED678522C3AE50009AFAC5 /* ImageController.swift */; };
 		4EED678922C3BE58009AFAC5 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED678822C3BE58009AFAC5 /* AvatarViewController.swift */; };
+		4EED678B22C4C878009AFAC5 /* Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED678A22C4C878009AFAC5 /* Back.swift */; };
+		4EED678D22C4CA93009AFAC5 /* TransferAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED678C22C4CA93009AFAC5 /* TransferAvatar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		4EED678322C379A4009AFAC5 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		4EED678522C3AE50009AFAC5 /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		4EED678822C3BE58009AFAC5 /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
+		4EED678A22C4C878009AFAC5 /* Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Back.swift; sourceTree = "<group>"; };
+		4EED678C22C4CA93009AFAC5 /* TransferAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferAvatar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				4EED678122C35AFA009AFAC5 /* User.swift */,
 				4EED678322C379A4009AFAC5 /* UsersTableViewController.swift */,
 				4EED678522C3AE50009AFAC5 /* ImageController.swift */,
+				4EED678A22C4C878009AFAC5 /* Back.swift */,
+				4EED678C22C4CA93009AFAC5 /* TransferAvatar.swift */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -271,8 +277,10 @@
 				4EED678622C3AE50009AFAC5 /* ImageController.swift in Sources */,
 				4EED675422C26EF2009AFAC5 /* ViewController.swift in Sources */,
 				4EED678222C35AFA009AFAC5 /* User.swift in Sources */,
+				4EED678D22C4CA93009AFAC5 /* TransferAvatar.swift in Sources */,
 				4EED678422C379A4009AFAC5 /* UsersTableViewController.swift in Sources */,
 				4EED675222C26EF2009AFAC5 /* AppDelegate.swift in Sources */,
+				4EED678B22C4C878009AFAC5 /* Back.swift in Sources */,
 				4EED678922C3BE58009AFAC5 /* AvatarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VY879NQ4R5;
 				INFOPLIST_FILE = Profil/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -466,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VY879NQ4R5;
 				INFOPLIST_FILE = Profil/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

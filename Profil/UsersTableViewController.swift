@@ -14,7 +14,6 @@ class UsersTableViewController: UITableViewController {
     var appr: [User] = []
     var form: [User] = []
     
-    var avatar: UIImage?
     
 
     override func viewDidLoad() {
@@ -54,16 +53,18 @@ class UsersTableViewController: UITableViewController {
             case 0:
                 cell.textLabel?.text = appr[indexPath.row].firstName + " " + appr[indexPath.row].lastName
                 cell.detailTextLabel?.text = "apprenant"
+                cell.imageView?.image =  appr[indexPath.row].avatar
             default:
                 cell.textLabel?.text = form[indexPath.row].firstName + " " + form[indexPath.row].lastName
                 cell.detailTextLabel?.text = "formateur"
+                cell.imageView?.image =  form[indexPath.row].avatar
         }
         
-        let list = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-        let choice = list.randomElement()!
-        let image = UIImage (named: String(choice))
-        
-        cell.imageView?.image = image
+//        let list = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+//        let choice = list.randomElement()!
+//        let image = UIImage (named: String(choice))
+//        let image = UIImage (named: avatar)
+
         return cell
     }
 

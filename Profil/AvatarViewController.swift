@@ -8,15 +8,17 @@
 
 import UIKit
 
+
+
+// Employeur
 class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
 
-    
+    // mon employé
+    var delegate: TransferAvatar?
 
     @IBOutlet weak var picker: UIPickerView!
     
     @IBOutlet weak var avatarVue: UIImageView!
-    
-    
     let pickerData = ["Item 1",
                       "Item 2",
                       "Item 3",
@@ -26,22 +28,28 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                       "Item 7",
                       "Item 8",
                       "Item 9"]
-    
+   
+    var avatarImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//            let picki = picker.
+        picker.dataSource = self
+        picker.delegate = self
         // Do any additional setup after loading the view.
     }
-    
-    
 
-    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        //        let destinationViewController = segue.destination as?  UsersTableViewController
+//        //        destinationViewController?.users = allUsers
+//        //        or
+//        if let destinationViewController = segue.destination as? UsersTableViewController {
+//            destinationViewController.avatar = avatarImage
+//            //            destination <-- origine
+//        }
+//
+//    }
 //        var pickerData: [String] = [String]()
-        
-    
-        
 //        avatarVue.image = UIImage(named: "")
         
         //  UIPickerViewDataSource
@@ -63,7 +71,12 @@ class AvatarViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         func pickerView(_ pickerView: UIPickerView,
                         didSelectRow row: Int,
                         inComponent component: Int) {
-            print("row: \(row), component: \(component)")
+            print("row: \(row), component: \(component) , \(pickerData[row])")
+            avatarVue.image = UIImage(named: String(row))
+            
+            avatarImage = avatarVue.image
+            delegate?.transfer(avatar: avatarImage!)
+        
         }
     }
 

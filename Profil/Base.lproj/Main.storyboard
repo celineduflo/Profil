@@ -32,7 +32,7 @@
                     </view>
                     <connections>
                         <outlet property="avatarVue" destination="VqJ-oH-9RO" id="gUr-E9-d1O"/>
-                        <outlet property="picker" destination="5dJ-96-RMg" id="dHc-6b-ByC"/>
+                        <outlet property="picker" destination="5dJ-96-RMg" id="x2f-Lr-tSB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHx-Xh-2ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
